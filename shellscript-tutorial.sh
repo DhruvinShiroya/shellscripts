@@ -35,6 +35,7 @@ fi
 # given the input file take the first field and run job on it.
 
 
-cat $input_file_path | cut -d " " -f 1-2 | parallel ./do_someting.sh {} -o output.txt
+cat $input_file_path | cut -d " " -f 1-2 | parallel ./do_someting.sh {} $output_file
+
 
 
